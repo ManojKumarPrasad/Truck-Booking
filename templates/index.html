@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Truck Booking</title>
+    <style>
+        .content {
+            width: 1200px;
+            height: 100vh;
+            margin-top: 0px;
+            margin: auto;
+            text-align: center;
+            font-weight: 800;
+        }
+        .navbar {
+            background-color: #832B00;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("{{ url_for('static', filename='background1.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+        .content {
+            font-family: 800;
+            text-align: center;
+            margin-top: 200px;
+            color: white; /* Ensures text is visible on background images */
+        }
+        #logo {
+            margin-top: 70px;
+            width: 5cm;
+            height: 5cm;
+            position: absolute;
+            top: 10px;
+            left: calc(50% - 2.5cm); /* Adjust left position to center the logo */
+            z-index: 1; /* Ensures the logo is above the background image */
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+        .btn:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        .btn2 {
+            background-color: #008CBA; /* Blue */
+        }
+        .btn2:hover {
+            background-color: #007bb5; /* Darker blue on hover */
+        }
+        .quote {
+            color: white;
+            font-size: 24px;
+            margin-top: 20px;
+            font-style: italic;
+            font-weight: 800; /* Use a high value for very bold */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About Us</a>
+        <a href="{{ url_for('pricing') }}">Pricing</a>
+        <a href="{{ url_for('book') }}">Book Now</a>
+    </div>
+    <img id="logo" src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+    <div class="content">
+        <h3>Logistics</h3>
+        <h1>SHIP YOUR <br>PRODUCTS</h1>
+        <p class="quote">"We deliver more than packages; we deliver promises."</p>
+        <a href="{{ url_for('about') }}" class="btn">Read More</a>
+        <a href="{{ url_for('book') }}" class="btn btn2">Book Now</a>
+    </div>
+    <footer id="contact">
+        <p>Contact Us: <a href="mailto:mskhan6812@gmail.com">mskhan6812@gmail.com</a> || (+91) 8521478524</p>
+    </footer>
+</body>
+</html>

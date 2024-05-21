@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ffd700 0%, #0315dc 100%);
+        }
+        .navbar {
+            background-color: #333;
+            /* background-color: #832B00; */
+            padding: 10px;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: #4CAF50;
+        }
+        .logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px 0;
+        }
+        .logo img {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .grid-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .grid-item:hover {
+            transform: scale(1.05);
+            background-color: #f0f0f0;
+        }
+        .grid-item h2 {
+            color: #832B00;
+        }
+        .grid-item p {
+            color: #555;
+        }
+        .section-heading {
+            font-size: 28px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #333;
+            /* background-color: #832B00; */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('about') }}">About Us</a>
+        <a href="{{ url_for('pricing') }}">Pricing</a>
+        <a href="{{ url_for('book') }}">Book Now</a>
+    </div>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        <h1 class="section-heading">About Us</h1>
+        <h2>Trusted bookings for a reliable journey</h2>
+    </div>
+    <div class="content">
+        <div class="grid-container">
+            <div class="grid-item">
+                <h2>Our Goal</h2>
+                <p>At Sahanwaj Logistics, our goal is to revolutionize the truck booking industry by providing a seamless and efficient platform for both customers and truck owners. We aim to simplify the process of booking trucks while ensuring transparency, reliability, and affordability.</p>
+            </div>
+            <div class="grid-item">
+                <h2>Achievements</h2>
+                <p>Since our inception, we have achieved significant milestones in the truck booking sector. With thousands of successful bookings and satisfied customers, we have established ourselves as a trusted name in the industry. Our commitment to excellence has earned us recognition for our outstanding service and customer satisfaction.</p>
+            </div>
+            <div class="grid-item">
+                <h2>History</h2>
+                <p>Established in 2000, Sahanwaj Logistics has a rich history of providing top-notch truck booking services. From humble beginnings, we have grown into a reputable company, thanks to our dedicated team and loyal customers. Over the years, we have adapted to the changing needs of the market, ensuring that we stay ahead of the competition.</p>
+            </div>
+            <div class="grid-item">
+                <h2>Why Us?</h2>
+                <p>Choosing Sahanwaj Logistics for your truck booking needs offers several advantages. We offer a wide range of trucks to choose from, ensuring that you find the perfect vehicle for your needs. Our user-friendly platform makes booking quick and easy, while our competitive prices ensure that you get the best value for your money. Additionally, our commitment to customer satisfaction means that you can expect nothing but the best service from us.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Visit our office At: Ghanghar, Barkatha, Hazaribagh (825405)</p>
+    </footer>
+</body>
+</html>
